@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Hymns – Sacred Music for Prayer & Reflection</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Daily Hymns shares gentle sacred music, hymns, and meditative soundscapes for prayer, reflection, and quiet mornings.">
+
+  <!-- Favicons (replace later with Daily Hymns set if desired) -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <div class="header-top">
+      <div class="brand-mark">Daily Hymns</div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About / Mission</a>
+        <a href="releases.html">Latest Hymns</a>
+        <a href="playlist.html">Prayer Playlists</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="header-main">
+      <h1>Daily Hymns</h1>
+      <p>Let the music lead you into prayer.</p>
+    </div>
+
+  </div>
+</header>
+
+
+<main class="page-wrap">
+
+  <!-- ============================= -->
+  <!-- Hero / Welcome Section -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Daily Hymns</div>
+    <h2 class="section-title">Sacred Music for Prayer & Reflection</h2>
+    <p class="lead">
+      Gentle hymns and meditative soundscapes for quiet rooms, early mornings, and moments when words fall short.
+      Music that stays humble—supporting prayer without rushing the heart.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="https://www.youtube.com/@dailyhymns.channel" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Listen on Spotify</a>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Playlist Highlight -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Featured</div>
+    <h2 class="section-title">Prayer & Stillness · Quiet Focus</h2>
+    <p class="section-subtitle">
+      Soft, steady arrangements designed for prayer, reflection, reading, and calm breathing.
+      No drama—just space.
+    </p>
+
+    <div class="embed-grid">
+      <div class="embed-box">
+        <!-- Spotify playlist (replace with your playlist ID/URL) -->
+        <iframe src="https://open.spotify.com/embed/playlist/your_playlist_id"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+
+      <div class="embed-box">
+        <!-- YouTube playlist embed (replace with your Daily Hymns playlist/video embed) -->
+        <iframe src="https://www.youtube.com/embed/your_video_id"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- About Section -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Music for quiet prayer and gentle courage</h2>
+    <p>
+      Daily Hymns shares newly arranged sacred music in a contemplative, prayerful atmosphere.
+      The goal is simple: to help you remain still, breathe slowly, and return your attention to God—
+      without loud builds, sharp rhythm, or showy performance.
+    </p>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Latest Releases – AUTO UPDATES -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Latest Releases</div>
+    <h2 class="section-title">Newest Uploads from YouTube</h2>
+
+    <div class="card-grid" id="latest-release-grid">
+      <!-- 자동으로 채워짐 -->
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Platforms Section -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Listen</div>
+    <h2 class="section-title">Where to find Daily Hymns</h2>
+
+    <div class="chip-row">
+      <span class="chip">YouTube</span>
+      <span class="chip">YouTube Music</span>
+      <span class="chip">Spotify (optional)</span>
+      <span class="chip">Prayer & meditation</span>
+      <span class="chip">Quiet listening for mornings & nights</span>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Footer -->
+  <!-- ============================= -->
+  <footer class="site-footer">
+    <span>© 2025 Daily Hymns · Sacred music for prayer & reflection.</span>
+    <span>Contact:
+      <a href="mailto:swaylymusic@gmail.com">swaylymusic@gmail.com</a>
+    </span>
+  </footer>
+
+</main>
+
+
+<!-- ==================================================== -->
+<!-- JavaScript: Load Latest YouTube Releases Automatically -->
+<!-- ==================================================== -->
+<script>
+async function loadLatestVideos() {
+  const container = document.getElementById("latest-release-grid");
+
+  container.innerHTML = `
+    <div class="card loading-card">Loading latest releases...</div>
+  `;
+
+  try {
+    // TODO: Replace with your Daily Hymns Cloudflare Worker endpoint
+    // Example: https://dailyhymns-youtube.your-domain.workers.dev
+    const res = await fetch("https://dailyhymns-youtube.example.workers.dev");
+    const videos = await res.json();
+
+    container.innerHTML = "";
+
+    videos.forEach(video => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}">
+        <h3 class="card-title">${video.title}</h3>
+        <div class="card-meta">${new Date(video.publishedAt).toLocaleDateString()}</div>
+        <a class="btn btn-ghost"
+           href="https://www.youtube.com/watch?v=${video.videoId}"
+           target="_blank"
+           rel="noopener">Watch</a>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    container.innerHTML = "<p>Failed to load YouTube videos.</p>";
+    console.error(error);
+  }
+}
+
+loadLatestVideos();
+</script>
+
+
+</body>
+</html>
+
