@@ -88,52 +88,41 @@
 </main>
 
 <script>
-  // TODO: Replace with your Daily Hymns Cloudflare Worker endpoint
-  // Example: https://dailyhymns-youtube.your-domain.workers.dev
-  const API_URL = "https://dailyhymns-youtube.donlee-realtor.workers.dev";
+async function loadLatestVideos(limit = 12) {
+  const container = document.getElementById("latest-release-grid");
 
-  // 날짜 → "2 days ago"
-  function timeAgo(dateStr) {
-    const diff = (new Date() - new Date(dateStr)) / 1000;
-    const days = Math.floor(diff / 86400);
-    if (days < 1) return "Today";
-    if (days === 1) return "1 day ago";
-    return `${days} days ago`;
+  container.innerHTML = `<div class="card loading-card">Loading latest releases...</div>`;
+
+  try {
+    const res = await fetch("https://dailyhymns-youtube.donlee-realtor.workers.dev");
+    const videos = (await res.json()).slice(0, limit);
+
+    container.innerHTML = "";
+
+    videos.forEach(video => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}">
+        <h3 class="card-title">${video.title}</h3>
+        <div class="card-meta">${new Date(video.publishedAt).toLocaleDateString()}</div>
+        <a class="btn btn-ghost"
+           href="https://www.youtube.com/watch?v=${video.videoId}"
+           target="_blank"
+           rel="noopener">Watch</a>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    container.innerHTML = "<p>Failed to load YouTube videos.</p>";
+    console.error(error);
   }
+}
 
-  async function loadVideos() {
-    const grid = document.getElementById("video-grid");
-
-    try {
-      const res = await fetch(API_URL);
-      const list = await res.json();
-
-      grid.innerHTML = "";
-
-      list.forEach(v => {
-        const card = document.createElement("article");
-        card.className = "video-card";
-
-        card.innerHTML = `
-          <a href="https://www.youtube.com/watch?v=${v.videoId}" target="_blank">
-            <img class="video-thumb" src="${v.thumbnail}" alt="">
-          </a>
-          <div class="video-info">
-            <div class="video-title">${v.title}</div>
-            <div class="video-meta">${timeAgo(v.publishedAt)}</div>
-          </div>
-        `;
-
-        grid.appendChild(card);
-      });
-
-    } catch (err) {
-      grid.innerHTML = "<p>Failed to load videos.</p>";
-      console.error(err);
-    }
-  }
-
-  loadVideos();
+loadLatestVideos(12);
 </script>
 
 </body>
