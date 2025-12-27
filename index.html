@@ -162,7 +162,7 @@ async function loadLatestVideos() {
     // TODO: Replace with your Daily Hymns Cloudflare Worker endpoint
     // Example: https://dailyhymns-youtube.your-domain.workers.dev
     const res = await fetch("https://dailyhymns-youtube.donlee-realtor.workers.dev");
-    const videos = await res.json();
+    const videos = (await res.json()).slice(0, 3);
 
     container.innerHTML = "";
 
