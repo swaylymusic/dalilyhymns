@@ -82,7 +82,7 @@ a { color: inherit; }
   content:"";
   position:absolute;
   inset:0;
-  background: url("../assets/images/snow_forest.jpg") center/cover no-repeat;
+  background: url("../assets/images/hero-bg-new.jpg") center/cover no-repeat;
   /* 더 밝고 ‘환희’ 톤: 어둡게 누르지 않고, 따뜻한 빛만 살림 */
   filter: brightness(0.92) saturate(1.05) contrast(1.05);
   transform: scale(1.02);
