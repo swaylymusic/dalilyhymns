@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Daily Hymns — Sacred Music for Prayer & Stillness</title>
+  <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ✅ BRAND-FIRST Title -->
+  <title>Daily Hymns | 매일성가 · Sacred Music for Prayer & Reflection</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Meta Description (EN + KO) -->
   <meta name="description"
-        content="Daily Hymns shares newly arranged sacred music for prayer, reflection, and quiet mornings. Known in Korean as 매일성가." />
+        content="Daily Hymns (매일성가) official website — gentle Catholic sacred music, hymns, and contemplative soundscapes for prayer, reflection, and quiet mornings.">
 
-  <link rel="canonical" href="https://dailyhymnschannel.com/" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <!-- ✅ Canonical -->
+  <link rel="canonical" href="https://dailyhymnschannel.com/">
 
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Daily Hymns" />
-  <meta property="og:description" content="Sacred music for prayer, reflection, and stillness — 매일성가" />
-  <meta property="og:url" content="https://dailyhymnschannel.com/" />
+  <!-- ✅ Robots -->
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Daily Hymns" />
-  <meta name="twitter:description" content="Sacred music for prayer & quiet reflection — 매일성가" />
+  <!-- ✅ Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daily Hymns | 매일성가">
+  <meta property="og:description" content="Official website of Daily Hymns (매일성가) — Catholic sacred hymns & contemplative prayer music.">
+  <meta property="og:url" content="https://dailyhymnschannel.com/">
+  <!-- 대표 이미지가 있으면 아래 경로 교체 -->
+  <!-- <meta property="og:image" content="https://dailyhymnschannel.com/assets/images/og.jpg"> -->
 
-  <link rel="alternate" href="https://dailyhymnschannel.com/" hreflang="en" />
-  <link rel="alternate" href="https://dailyhymnschannel.com/maeil-seongga.html" hreflang="ko" />
-  <link rel="alternate" href="https://dailyhymnschannel.com/" hreflang="x-default" />
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daily Hymns | 매일성가">
+  <meta name="twitter:description" content="Catholic sacred hymns & contemplative prayer music. Official website of Daily Hymns (매일성가).">
+  <!-- <meta name="twitter:image" content="https://dailyhymnschannel.com/assets/images/og.jpg"> -->
 
-  <link rel="stylesheet" href="css/main.css" />
+  <!-- ✅ Hreflang (IMPORTANT: ko points to Korean hub page) -->
+  <link rel="alternate" href="https://dailyhymnschannel.com/" hreflang="en">
+  <link rel="alternate" href="https://dailyhymnschannel.com/maeil-seongga.html" hreflang="ko">
+  <link rel="alternate" href="https://dailyhymnschannel.com/" hreflang="x-default">
+
+  <!-- Favicons -->
+  <link rel="icon" href="assets/images/favicon.ico" sizes="16x16" type="image/x-icon">
+  <link rel="icon" href="assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- ✅ Structured Data: Brand = Daily Hymns, alternateName includes 매일성가 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Daily Hymns",
+        "alternateName": ["매일성가", "Daily Hymns Channel"],
+        "url": "https://dailyhymnschannel.com/",
+        "email": "dailyhymns.channel@gmail.com",
+        "sameAs": [
+          "https://www.youtube.com/@dailyhymns.channel"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "Daily Hymns",
+        "alternateName": "매일성가",
+        "url": "https://dailyhymnschannel.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://dailyhymnschannel.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "name": "Daily Hymns | 매일성가",
+        "url": "https://dailyhymnschannel.com/",
+        "inLanguage": ["en", "ko"],
+        "about": [
+          "Daily Hymns",
+          "매일성가",
+          "Catholic hymns",
+          "Sacred music",
+          "Prayer music",
+          "Contemplative music",
+          "Meditation music",
+          "Rosary music"
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -35,7 +99,7 @@
     <div class="header-top">
       <div class="brand-mark">Daily Hymns</div>
       <nav class="main-nav">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="maeil-seongga.html">매일성가</a>
         <a href="about.html">About / Mission</a>
         <a href="releases.html">Latest Hymns</a>
@@ -46,40 +110,179 @@
 
     <div class="header-main">
       <h1>Daily Hymns</h1>
-      <p>Sacred music for prayer, reflection, and stillness.</p>
+      <p>Let the music lead you into prayer.</p>
+      <!-- ✅ Minimal, non-disruptive brand-alias line (helps "매일성가" search) -->
+      <p style="margin-top:10px; opacity:0.85;">
+        <strong>매일성가</strong> is the Korean name for <strong>Daily Hymns</strong>.
+      </p>
     </div>
 
   </div>
 </header>
 
+
 <main class="page-wrap">
 
+  <!-- ============================= -->
+  <!-- Hero / Welcome Section -->
+  <!-- ============================= -->
   <section class="section">
-    <h2 class="section-title">A Quiet Space for Prayer</h2>
+    <div class="section-label">Daily Hymns</div>
+    <h2 class="section-title">Sacred Music for Prayer &amp; Reflection</h2>
     <p class="lead">
-      Daily Hymns is a sacred music project created to accompany prayer and contemplation.
-      Known in Korean as <strong>매일성가</strong>, this work emphasizes restraint, silence,
-      and gentle musical flow rather than dramatic expression.
+      Gentle hymns and meditative soundscapes for quiet rooms, early mornings, and moments when words fall short.
+      Music that stays humble—supporting prayer without rushing the heart.
+    </p>
+
+    <!-- ✅ Natural Korean alias sentence (optional but effective for KO search intent) -->
+    <p style="margin-top:10px;">
+      Daily Hymns (<strong>매일성가</strong>) 공식 홈페이지입니다.
     </p>
 
     <div class="btn-row">
-      <a class="btn btn-primary" href="releases.html">Latest Hymns</a>
-      <a class="btn btn-ghost" href="playlist.html">Prayer Playlists</a>
+      <a class="btn btn-primary" href="https://www.youtube.com/@dailyhymns.channel" target="_blank" rel="noopener">Watch on YouTube</a>
+      <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Listen on Spotify</a>
       <a class="btn btn-ghost" href="maeil-seongga.html">매일성가 안내</a>
     </div>
   </section>
 
+
+  <!-- ============================= -->
+  <!-- Playlist Highlight -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Featured</div>
+    <h2 class="section-title">Prayer &amp; Stillness · Quiet Focus</h2>
+    <p class="section-subtitle">
+      Soft, steady arrangements designed for prayer, reflection, reading, and calm breathing.
+      No drama—just space.
+    </p>
+
+    <div class="embed-grid">
+      <div class="embed-box">
+        <!-- Spotify playlist (replace with your playlist ID/URL) -->
+        <iframe src="https://open.spotify.com/embed/playlist/your_playlist_id"
+                title="Daily Hymns · Prayer & Stillness Spotify playlist"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+      </div>
+
+      <div class="embed-box">
+        <!-- YouTube playlist embed (replace with your Daily Hymns playlist/video embed) -->
+        <iframe src="https://www.youtube.com/embed/TIxvBRcsGMw?si=ucZn7NdRaifzZZha"
+                title="Daily Hymns · YouTube playlist"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- About Section -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Music for quiet prayer and gentle courage</h2>
+    <p>
+      Daily Hymns shares newly arranged sacred music in a contemplative, prayerful atmosphere.
+      The goal is simple: to help you remain still, breathe slowly, and return your attention to God—
+      without loud builds, sharp rhythm, or showy performance.
+    </p>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Latest Releases – AUTO UPDATES -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Latest Releases</div>
+    <h2 class="section-title">Newest Uploads from YouTube</h2>
+
+    <div class="card-grid" id="latest-release-grid">
+      <!-- 자동으로 채워짐 -->
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Platforms Section -->
+  <!-- ============================= -->
+  <section class="section">
+    <div class="section-label">Listen</div>
+    <h2 class="section-title">Where to find Daily Hymns</h2>
+
+    <div class="chip-row">
+      <span class="chip">YouTube</span>
+      <span class="chip">YouTube Music</span>
+      <span class="chip">Spotify (optional)</span>
+      <span class="chip">Prayer &amp; meditation</span>
+      <span class="chip">Quiet listening for mornings &amp; nights</span>
+    </div>
+  </section>
+
+
+  <!-- ============================= -->
+  <!-- Footer -->
+  <!-- ============================= -->
   <footer class="site-footer">
-    <span>© 2025 Daily Hymns</span>
-    <span>Contact: <a href="mailto:dailyhymns.channel@gmail.com">dailyhymns.channel@gmail.com</a></span>
-    <span class="footer-support">
-      ☕ <a class="support-link" href="https://buymeacoffee.com/dailyhymns" target="_blank" rel="noopener">
-        Buy Me a Coffee
-      </a>
+    <span>© 2025 Daily Hymns · Sacred music for prayer &amp; reflection.</span>
+    <span>Contact:
+      <a href="mailto:dailyhymns.channel@gmail.com">dailyhymns.channel@gmail.com</a>
     </span>
+    <span class="footer-support">☕ <a class="support-link" href="https://buymeacoffee.com/dailyhymns" target="_blank" rel="noopener">Buy Me a Coffee</a><span class="support-note">— quiet support</span></span>
   </footer>
 
 </main>
+
+
+<!-- ==================================================== -->
+<!-- JavaScript: Load Latest YouTube Releases Automatically -->
+<!-- ==================================================== -->
+<script>
+async function loadLatestVideos() {
+  const container = document.getElementById("latest-release-grid");
+
+  container.innerHTML = `
+    <div class="card loading-card">Loading latest releases...</div>
+  `;
+
+  try {
+    // TODO: Replace with your Daily Hymns Cloudflare Worker endpoint
+    // Example: https://dailyhymns-youtube.your-domain.workers.dev
+    const res = await fetch("https://dailyhymns-youtube.donlee-realtor.workers.dev");
+    const videos = (await res.json()).slice(0, 3);
+
+    container.innerHTML = "";
+
+    videos.forEach(video => {
+      const card = document.createElement("article");
+      card.className = "card";
+
+      card.innerHTML = `
+        <img src="${video.thumbnail}" alt="${video.title}">
+        <h3 class="card-title">${video.title}</h3>
+        <div class="card-meta">${new Date(video.publishedAt).toLocaleDateString()}</div>
+        <a class="btn btn-ghost"
+           href="https://www.youtube.com/watch?v=${video.videoId}"
+           target="_blank"
+           rel="noopener">Watch</a>
+      `;
+
+      container.appendChild(card);
+    });
+
+  } catch (error) {
+    container.innerHTML = "<p>Failed to load YouTube videos.</p>";
+    console.error(error);
+  }
+}
+
+loadLatestVideos();
+</script>
 
 </body>
 </html>
