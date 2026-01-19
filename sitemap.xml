@@ -9,38 +9,37 @@
   </url>
 
   <url>
-    <loc>https://dailyhymnschannel.com/maeil-seongga.html</loc>
+    <loc>https://dailyhymnschannel.com/maeil-seongga</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://dailyhymnschannel.com/about.html</loc>
+    <loc>https://dailyhymnschannel.com/about</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://dailyhymnschannel.com/releases.html</loc>
+    <loc>https://dailyhymnschannel.com/releases</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://dailyhymnschannel.com/playlist.html</loc>
+    <loc>https://dailyhymnschannel.com/playlist</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://dailyhymnschannel.com/contact.html</loc>
+    <loc>https://dailyhymnschannel.com/contact</loc>
     <lastmod>2026-01-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
 </urlset>
