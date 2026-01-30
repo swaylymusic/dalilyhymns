@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /?q=
+Disallow: /*?q=
 
-Sitemap: https://dailyhymnschannel.com/sitemap.xml
+Sitemap: https://dailyhymnchannel.com/sitemap.xml
